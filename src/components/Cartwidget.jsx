@@ -1,10 +1,16 @@
 import React from 'react'
+import { CgShoppingCart } from "react-icons/cg";
+import { Box} from '@chakra-ui/react';
+
 
 const Cartwidget = () => {
   return (
-    <div>
-        Carrito 1
-    </div>
+    <Box display="flex" alignItems="center">
+      <CgShoppingCart />
+      <Box marginLeft="2">
+        1
+      </Box>
+    </Box>
   )
 }
 
