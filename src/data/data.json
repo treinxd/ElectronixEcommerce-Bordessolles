@@ -1,0 +1,82 @@
+[
+{
+    "id": 1,
+    "categoria": "pc",
+    "descripcion": "La NVIDIA GeForce RTX 4090 es la GPU GeForce definitiva. Ofrece un enorme salto en rendimiento, eficiencia y gráficos impulsados por IA.",
+    "titulo": "RTX 4090",
+    "imagen": "",
+    "precio": 50
+},
+{
+    "id": 2,
+    "categoria": "pc",
+    "descripcion": "Este monitor de 23.5 te va a resultar cómodo para estudiar, trabajar o ver una película en tus tiempos de ocio. Asimismo, su resolución de 1920 x 1080 te permite disfrutar de momentos únicos gracias a una imagen de alta fidelidad.",
+    "titulo": "Monitor Samsung Gamer Curvo 24 Rg50 144hz",
+    "imagen": "",
+    "precio": 30
+},
+{
+    "id": 3,
+    "categoria": "pc",
+    "descripcion": "Mejora tu experiencia de juego con la Memoria RAM Fury Beast de Kingston, diseñada especialmente para gamers",
+    "titulo": "Memoria Ram Fury Beast Ddr4",
+    "imagen": "",
+    "precio": 10
+},
+{
+    "id": 4,
+    "categoria": "xbox",
+    "descripcion": "Con tu consola Xbox One tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
+    "titulo": "Microsoft Xbox One X 1TB",
+    "imagen": "",
+    "precio": 20
+},
+{
+    "id": 5,
+    "categoria": "xbox",
+    "descripcion": "Con tu consola Xbox Series tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
+    "titulo": "Consola Xbox Series X 1tb Ssd ",
+    "imagen": "",
+    "precio": 50
+},
+{
+    "id": 6,
+    "categoria": "xbox",
+    "descripcion": "Con tu consola Xbox Series tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
+    "titulo": "Consola Xbox Series S 512gb",
+    "imagen": "",
+    "precio": 40
+},
+{
+    "id": 7,
+    "categoria": "playstation",
+    "descripcion": "Con tu consola PlayStation 3 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
+    "titulo": "Sony PlayStation 3 Super Slim 500GB",
+    "imagen": "",
+    "precio": 20
+},
+{
+    "id": 8,
+    "categoria": "playstation",
+    "descripcion": "Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.",
+    "titulo": "Sony PlayStation 5 825GB",
+    "imagen": "",
+    "precio": 50
+},
+{
+    "id": 9,
+    "categoria": "playstation",
+    "descripcion": "a PlayStation 4 Slim cuenta con un potente procesador AMD Jaguar de 8 núcleos a 1.6 GHz y una GPU AMD Radeon, lo que te permite disfrutar de gráficos impresionantes y un rendimiento fluido en tus juegos.",
+    "titulo": "Sony PlayStation 4 Slim 500G",
+    "imagen": "",
+    "precio": 30
+},
+{
+    "id": 10,
+    "categoria": "pc",
+    "descripcion": "Mejora de forma notable la capacidad de respuesta de su sistema",
+    "titulo": "Disco sólido interno Kingston SA400S37/240G",
+    "imagen": "",
+    "precio": 20
+}
+]

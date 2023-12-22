@@ -1,13 +1,17 @@
 import React from 'react';
 import Cartwidget from './Cartwidget';
 import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import img from '../img/img.png';
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div>
       <Flex bg='blue.500' p='4' >
         <Box>
-          ElectronixEcommerce
+          <Link to={"/"}>
+            <img src={img} alt=""/>
+          </Link>
         </Box>
         <Spacer />
 
@@ -18,11 +22,21 @@ const Navbar = () => {
             </Box>
           </MenuButton>
           <MenuList>
-            <MenuItem>PC</MenuItem>
-            <MenuItem>Perifericos</MenuItem>
-            <MenuItem>Celular</MenuItem>
-            <MenuItem>Xbox</MenuItem>
-            <MenuItem>Playstation</MenuItem>
+            <MenuItem>
+              <Link to={`/categorias/${'pc'}`}>
+                PC
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/categorias/${'xbox'}`}>
+                Xbox
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to={`/categorias/${'playstation'}`}>
+                Playstation
+              </Link>
+            </MenuItem>
           </MenuList>
         </Menu>
 
@@ -42,4 +56,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
