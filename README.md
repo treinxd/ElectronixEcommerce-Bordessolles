@@ -4,7 +4,7 @@
 |--|--|
 |Pablo|Bordessolles
 
-Proyecto E-commerce desarrollado en React, utilizando las bibliotecas Chakra UI y React Router DOM.
+Proyecto E-commerce responsive desarrollado en React, utilizando las bibliotecas Chakra UI y React Router DOM.
 
 Caracteristicas de la pagina:
 
