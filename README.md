@@ -13,4 +13,4 @@ Caracteristicas de la pagina:
 - Formulario de compra: Formulario necesario para poder realizar la compra y obtener un id de compra.
 - Carga dinamica de productos: Los productos vienen desde la base de datos de firestore.
 
-![gif]()
+![2024-01-26 20-45-08](https://github.com/treinxd/ElectronixEcommerce-Bordessolles/assets/104237867/36135039-153d-4f05-b427-7a795ca7f41e)
