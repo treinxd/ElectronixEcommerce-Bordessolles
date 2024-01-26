@@ -3,13 +3,13 @@ import { Card, CardBody, Heading, Stack, Text, Divider, CardFooter, Button, Butt
 import { Link } from 'react-router-dom'
 
 
-const Item = ({ titulo, descripcion, precio, categoria, id }) => {
+const Item = ({ titulo, descripcion, categoria, id, precio }) => {
   return (
       <div>
           <Card maxW='sm'>
               <CardBody>
+                  <Heading size='md'>{titulo}</Heading>
                   <Stack mt='6' spacing='3'>
-                      <Heading size='md'>{titulo}</Heading>
                       <Text>
                           {descripcion}
                       </Text>
@@ -25,8 +25,7 @@ const Item = ({ titulo, descripcion, precio, categoria, id }) => {
               <CardFooter>
                   <ButtonGroup spacing='2'>
                       <Button variant='solid' colorScheme='blue'>
-                          <Link to={`/product/${id}`}>Ver mas
-                          </Link>
+                        <Link to={`/item/${id}`}>Ver mas</Link>
                       </Button>
                   </ButtonGroup>
               </CardFooter>

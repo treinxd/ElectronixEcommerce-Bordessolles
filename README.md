@@ -1,12 +1,16 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# React + Vite - Proyecto E-commerce
 
 |Nombre|Apellido|
 |--|--|
 |Pablo|Bordessolles
+
+Proyecto E-commerce desarrollado en React, utilizando las bibliotecas Chakra UI y React Router DOM.
+
+Caracteristicas de la pagina:
+
+- Categorias: Se le permite al usuario filtrar los productos por categorias.
+- Carrito: Selecciona los productos que quieras comprar y agregalos al carrito.
+- Formulario de compra: Formulario necesario para poder realizar la compra y obtener un id de compra.
+- Carga dinamica de productos: Los productos vienen desde la base de datos de firestore.
+
+![gif]()

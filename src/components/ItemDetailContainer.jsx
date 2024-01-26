@@ -1,25 +1,44 @@
-import React, { useEffect, useState } from 'react'
-import {conseguirItemId} from '../data/dataProductos'
-import ItemDetail from './itemDetail'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import Loader from './Loader';
+
+
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState(null)
-  const id = useParams().id
+
+  const { id } = useParams()
+  const [item, setItem] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+
 
   useEffect(() => {
-    conseguirItemId(Number(id))
-          .then((res) => {
-              setItem(res)
-          })
-  }, [id])
+    const db = getFirestore();
 
-  return (
+    const oneItem = doc(db, "productosElectronicos", `${id}`);
+    getDoc(oneItem).then((snapshot) => {
+        if (snapshot.exists()) {
+            const doc = snapshot.data();
+            setItem(doc);
+            setLoading(false)
+        } else {
+            console.log("El documento no existe.");
+        }
+    })
+}, [])
+
+
+  if (loading) {
+    return <Loader />;
+  } else {
+    return (
       <div>
-          {item && <ItemDetail item={item} />
-          }
+        {item && <ItemDetail item={item} />}
       </div>
-  )
-}
+    );
+  }
+};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

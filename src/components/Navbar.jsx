@@ -39,17 +39,10 @@ const NavBar = () => {
             </MenuItem>
           </MenuList>
         </Menu>
-
         <Box mr='4'>
-          Informacion
-        </Box>
-
-        <Box mr='4'>
-          Contacto
-        </Box>
-
-        <Box mr='4'>
-          <Cartwidget />
+          <Link to={"/cart"}>
+            <Cartwidget />
+          </Link>
         </Box>
       </Flex>
     </div>

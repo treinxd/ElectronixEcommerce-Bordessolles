@@ -1,32 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import ItemList from './itemList';
-import { infoProductos } from '../data/dataProductos';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import Itemlist from './ItemList';
+import Loader from './Loader';
 
 const ItemListContainer = () => {
-
-  const [productos, setProductos] = useState([])
-  const [titulo, setTitulo] = useState('Productos')
-  const categoria = useParams().categoria
+  const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { idCategoria } = useParams();
 
   useEffect(() => {
-    infoProductos()
-      .then((res) => {
-        if (categoria) {
-          setProductos(res.filter((p) => p.categoria.toLowerCase() === categoria.toLowerCase()))
-          setTitulo(categoria)
-        } else {
-          setProductos(res);
-          setTitulo('Productos');
-        }
-      })
-  },[categoria]);
 
-  return (
+    const db = getFirestore()
+  
+    const itemsCollection = collection(db, "productosElectronicos")
+  
+    getDocs(itemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => doc.data())
+      setProductos(docs)
+      setLoading(false)
+    })
+  
+  }, [])
+
+  const filtrado = productos.filter((producto) => producto.categoria === idCategoria);
+
+  if (loading === true) {
+    return <Loader />
+  } else {
+    return (
     <div>
-      <ItemList productos={productos} titulo={titulo} />
+      {idCategoria ? <Itemlist productos={filtrado} /> : <Itemlist productos={productos} />}
     </div>
-  );
+    );
+  };
 }
 
-export default ItemListContainer
+export default ItemListContainer;
